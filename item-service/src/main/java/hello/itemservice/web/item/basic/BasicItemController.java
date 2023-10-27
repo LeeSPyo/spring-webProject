@@ -32,7 +32,12 @@ public class BasicItemController {
 		model.addAttribute("item", item);
 		return "basic/item";
 	}
-	
+
+	@GetMapping("/add")
+	public String addForm() {
+		return "basic/addForm";
+	}
+
 	/**
 	 * 테스트용 데이터 추가
 	 */
@@ -42,5 +47,4 @@ public class BasicItemController {
 		itemRepository.save(new Item("testB", 20000, 20));
 	}
 
-	
 }
